@@ -1,0 +1,33 @@
+# Starting values, not tuned results. Change them here, not in the scripts.
+seed: 42
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  val_size: 0.1          # share of train.csv held out for threshold tuning / model selection
+
+baseline:
+  word_max_features: 100000
+  char_max_features: 100000
+  use_char: true         # set false if RAM is tight
+  min_df: 2
+  C: 4.0
+  class_weight: balanced
+
+model:
+  name: distilbert-base-uncased
+  max_length: 256
+
+train:
+  loss: weighted_bce     # bce | weighted_bce | focal
+  pos_weight_power: 0.5  # pos_weight = (negatives / positives) ** power; 1.0 = full inverse frequency
+  pos_weight_max: null   # optional cap on pos_weight
+  focal_gamma: 2.0
+  focal_alpha: null      # e.g. 0.25 to up-weight positives; null = no alpha term
+  epochs: 2
+  batch_size: 32
+  eval_batch_size: 128
+  lr: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  max_grad_norm: 1.0

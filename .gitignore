@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+build/
+dist/
+
+# Data, models and run outputs (regenerate with the scripts)
+data/
+runs/
+reports/
+models/
+*.joblib
+*.npy
+*.pt
+*.bin
+*.safetensors
+*.onnx
+wandb/
+
+# Secrets
+.env
+kaggle.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,4 @@
+# Transformer fine-tuning. Already installed on Kaggle and Colab GPU images.
+# The training test passes with torch 2.14.1 and transformers 5.19.0 (CPU).
+torch
+transformers

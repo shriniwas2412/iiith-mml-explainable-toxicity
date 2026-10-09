@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toxicity"
+version = "0.1.0"
+description = "Multi-label toxic comment classification with explainability and an identity-term bias audit"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "pyyaml",
+    "joblib",
+    "iterative-stratification",
+]
+
+[project.optional-dependencies]
+train = ["torch", "transformers"]
+dev = ["pytest", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["slow: trains a tiny transformer on CPU (needs torch and transformers)"]

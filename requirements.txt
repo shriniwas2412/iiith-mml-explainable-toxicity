@@ -1,0 +1,10 @@
+# Core: data, baseline, thresholds, templates and bias metrics. Runs on a laptop CPU.
+# Tests pass with numpy 2.2.6, pandas 2.3.3, scikit-learn 1.7.2, iterative-stratification 0.1.9 on Python 3.10.
+numpy
+pandas
+scikit-learn
+pyyaml
+joblib
+iterative-stratification
+matplotlib
+pytest

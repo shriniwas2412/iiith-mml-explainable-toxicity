@@ -1,0 +1,3 @@
+# External comparison models for the bias audit (scripts/09_bias_audit.py --model detoxify:<variant>).
+# Each variant downloads a checkpoint of a few hundred MB on first use.
+detoxify
