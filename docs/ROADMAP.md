@@ -3,6 +3,8 @@
 MML Capstone 4 — Multi-Label Toxic Comment Classification with Explainability.
 Team of five. Project lead: Shriniwas Maheshwari.
 
+New to the project? Read the [team guide](TEAM_GUIDE.md) first.
+
 ## What we are building
 
 1. A multi-label classifier for the six Jigsaw labels (toxic, severe_toxic,

@@ -1,5 +1,7 @@
 # Contributing
 
+The [team guide](docs/TEAM_GUIDE.md) explains the project, the pipeline and each workstream.
+
 ## Setup
 
 ```bash
