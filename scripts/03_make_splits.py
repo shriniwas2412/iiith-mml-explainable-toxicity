@@ -45,7 +45,7 @@ def main() -> None:
         stats[name] = {"rows": len(df), **df[LABELS].sum().astype(int).to_dict()}
     table = pd.DataFrame(stats).T
     table.to_csv(out / "split_stats.csv")
-    print(table)
+    print(table.to_string())
     print(f"\nWritten to {out}/")
 
 
