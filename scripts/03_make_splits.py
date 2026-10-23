@@ -7,6 +7,7 @@ runs on different training sizes remain comparable.
 
     python scripts/03_make_splits.py
     python scripts/03_make_splits.py --subset 30000
+    python scripts/03_make_splits.py --subset 30000 --subset-strategy rare_preserving --undersample-clean
 """
 
 from __future__ import annotations
@@ -17,7 +18,14 @@ from pathlib import Path
 import pandas as pd
 
 from toxicity import LABELS, load_config
-from toxicity.data import load_test, load_train, multilabel_split, subsample
+from toxicity.data import (
+    load_test,
+    load_train,
+    multilabel_split,
+    rare_preserving_subset,
+    subsample,
+    undersample_clean,
+)
 
 
 def main() -> None:
@@ -27,6 +35,17 @@ def main() -> None:
     parser.add_argument("--out", default=cfg["data"]["processed_dir"])
     parser.add_argument("--val-size", type=float, default=cfg["data"]["val_size"])
     parser.add_argument("--subset", type=int, default=None, help="Also write train_subset_<N>.csv")
+    parser.add_argument(
+        "--subset-strategy",
+        choices=["stratified", "rare_preserving"],
+        default="stratified",
+        help="stratified keeps label rates; rare_preserving keeps every threat / identity_hate / severe_toxic row",
+    )
+    parser.add_argument(
+        "--undersample-clean",
+        action="store_true",
+        help="Also write train_undersampled.csv: all labelled rows plus as many unlabelled rows",
+    )
     parser.add_argument("--seed", type=int, default=cfg["seed"])
     args = parser.parse_args()
 
@@ -36,8 +55,12 @@ def main() -> None:
     train, val = multilabel_split(load_train(raw / "train.csv"), args.val_size, args.seed)
     test = load_test(raw / "test.csv", raw / "test_labels.csv")
     splits = {"train": train, "val": val, "test": test}
-    if args.subset:
+    if args.subset and args.subset_strategy == "stratified":
         splits[f"train_subset_{args.subset}"] = subsample(train, args.subset, args.seed)
+    elif args.subset:
+        splits[f"train_subset_{args.subset}_rare"] = rare_preserving_subset(train, args.subset, args.seed)
+    if args.undersample_clean:
+        splits["train_undersampled"] = undersample_clean(train, args.seed)
 
     stats = {}
     for name, df in splits.items():

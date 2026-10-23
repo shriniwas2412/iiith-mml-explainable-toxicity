@@ -66,3 +66,32 @@ def test_label_summary_counts(comments):
     summary = label_summary(comments)
     assert summary.loc["toxic", "count"] == comments["toxic"].sum()
     assert summary.loc["no_label", "count"] == (comments[LABELS].sum(axis=1) == 0).sum()
+
+
+def test_rare_preserving_subset_keeps_every_rare_row(comments):
+    from toxicity.data import RARE_LABELS, rare_preserving_subset
+
+    sub = rare_preserving_subset(comments, n=len(comments) // 2, seed=0)
+    assert len(sub) == len(comments) // 2
+    for label in RARE_LABELS:
+        assert sub[label].sum() == comments[label].sum()
+    assert sub["id"].is_unique
+
+
+def test_undersample_clean_balances_labelled_and_clean(comments):
+    from toxicity.data import undersample_clean
+
+    sub = undersample_clean(comments, seed=0)
+    labelled = sub[LABELS].sum(axis=1) > 0
+    assert labelled.sum() == (comments[LABELS].sum(axis=1) > 0).sum()
+    assert (~labelled).sum() == labelled.sum()
+
+
+def test_clean_text_replaces_talk_page_artifacts_and_keeps_tone():
+    from toxicity.data import clean_text
+
+    raw = "See [[Page]] http://x.org/a by 10.0.0.1 [[User talk:Bob|Bob]] 12:30, 5 May 2008 (UTC) STOP!!!"
+    out = clean_text(raw)
+    assert "URL" in out and "IPADDRESS" in out and "USERLINK" in out
+    assert "[[" not in out and "(UTC)" not in out and "http" not in out
+    assert "STOP!!!" in out
