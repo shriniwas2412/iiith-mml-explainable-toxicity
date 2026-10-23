@@ -89,3 +89,14 @@ def test_mean_scores_by_label_uses_one_toxicity_class():
     assert out.loc["flagged", "toxic"] == pytest.approx(0.95)
     assert out.loc["flagged", "identity_hate"] == pytest.approx(0.475)
     assert len(out) == 3
+
+
+def test_generalized_mean_is_pulled_down_by_the_worst_value():
+    import numpy as np
+
+    from toxicity.bias import generalized_mean
+
+    assert abs(generalized_mean([0.9, 0.9, 0.9]) - 0.9) < 1e-9
+    low = generalized_mean([0.95, 0.95, 0.5])
+    assert 0.5 < low < np.mean([0.95, 0.95, 0.5])
+    assert abs(generalized_mean([0.8, float("nan")]) - 0.8) < 1e-9

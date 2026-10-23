@@ -81,6 +81,20 @@ def equality_differences(table: pd.DataFrame, overall: dict[str, float]) -> dict
     }
 
 
+def generalized_mean(values, p: float = -5.0) -> float:
+    """Power mean ((1/N) * sum v^p)^(1/p) over non-NaN values.
+
+    With p = -5 the lowest values dominate, so one badly treated identity pulls
+    the score down (Borkan et al. 2019; the Jigsaw unintended-bias competition
+    and Vaidya et al. 2020 use it over per-identity AUCs).
+    """
+    v = np.asarray(values, dtype=float)
+    v = v[~np.isnan(v)]
+    if len(v) == 0:
+        return float("nan")
+    return float(np.mean(v**p) ** (1 / p))
+
+
 def score_shift(templates: pd.DataFrame, prob: np.ndarray, reference_set: str = "neutral") -> pd.DataFrame:
     """Mean change in score when a frame is filled with each identity term.
 

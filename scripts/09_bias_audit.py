@@ -20,6 +20,7 @@ import pandas as pd
 from toxicity import LABELS
 from toxicity.bias import (
     equality_differences,
+    generalized_mean,
     mean_scores_by_label,
     overall_rates,
     per_identity_table,
@@ -76,7 +77,10 @@ def main() -> None:
             "mean_toxic_prob_on_nontoxic": float(toxic_prob[nontoxic].mean()),
         }
         if term_set in ("dixon", "india"):
-            entry.update(equality_differences(table[table["term_set"] == term_set], rates))
+            subset = table[table["term_set"] == term_set]
+            entry.update(equality_differences(subset, rates))
+            for metric in ("subgroup_auc", "bpsn_auc", "bnsp_auc"):
+                entry[f"gmean_{metric}"] = generalized_mean(subset[metric])
         summary["term_sets"][term_set] = entry
     (out / "summary.json").write_text(json.dumps(summary, indent=2))
 
