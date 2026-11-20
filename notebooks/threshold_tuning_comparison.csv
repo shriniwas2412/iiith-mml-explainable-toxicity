@@ -1,0 +1,6 @@
+Model,Default Macro F1 (t=0.50),Optimal Global Threshold,Global Tuned Macro F1,Per-Label Tuned Macro F1,Macro F1 Gain
+Logistic Regression (TF-IDF),0.5331,0.25,0.5912,0.5982,+0.0651
+Multinomial Naive Bayes (TF-IDF),0.4813,0.25,0.5244,0.5453,+0.0640
+Random Forest (TF-IDF),0.1419,0.1,0.5044,0.5553,+0.4134
+Multi-Label Bi-LSTM,0.4512,0.15,0.5356,0.5595,+0.1083
+BERT-base-uncased (3 Epochs),0.6497,0.5,0.6497,0.6497,Baseline Run 0
