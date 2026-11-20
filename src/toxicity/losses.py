@@ -32,10 +32,11 @@ class FocalLossWithLogits(nn.Module):
     gamma=0 and alpha=None reduce it to plain binary cross-entropy.
     """
 
-    def __init__(self, gamma: float = 2.0, alpha: float | None = None):
+    def __init__(self, gamma: float = 2.0, alpha: float | None = None, reduction: str = "mean"):
         super().__init__()
         self.gamma = gamma
         self.alpha = alpha
+        self.reduction = reduction
 
     def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
         bce = F.binary_cross_entropy_with_logits(logits, targets, reduction="none")
@@ -44,22 +45,25 @@ class FocalLossWithLogits(nn.Module):
         loss = (1 - p_correct) ** self.gamma * bce
         if self.alpha is not None:
             loss = (self.alpha * targets + (1 - self.alpha) * (1 - targets)) * loss
-        return loss.mean()
+        return loss.mean() if self.reduction == "mean" else loss
 
 
-def build_loss(name: str, y_train: np.ndarray, train_cfg: dict) -> nn.Module:
-    """Create the loss named in the config: bce, weighted_bce or focal."""
+def build_loss(name: str, y_train: np.ndarray, train_cfg: dict, reduction: str = "mean") -> nn.Module:
+    """Create the loss named in the config: bce, weighted_bce or focal.
+
+    reduction="none" returns one loss per (example, label), for per-example weights.
+    """
     if name == "bce":
-        return nn.BCEWithLogitsLoss()
+        return nn.BCEWithLogitsLoss(reduction=reduction)
     if name == "weighted_bce":
         weight = pos_weight_from_labels(
             y_train,
             power=train_cfg.get("pos_weight_power", 1.0),
             max_weight=train_cfg.get("pos_weight_max"),
         )
-        return nn.BCEWithLogitsLoss(pos_weight=torch.tensor(weight, dtype=torch.float32))
+        return nn.BCEWithLogitsLoss(pos_weight=torch.tensor(weight, dtype=torch.float32), reduction=reduction)
     if name == "focal":
         return FocalLossWithLogits(
-            gamma=train_cfg.get("focal_gamma", 2.0), alpha=train_cfg.get("focal_alpha")
+            gamma=train_cfg.get("focal_gamma", 2.0), alpha=train_cfg.get("focal_alpha"), reduction=reduction
         )
     raise ValueError(f"Unknown loss '{name}'. Use bce, weighted_bce or focal.")

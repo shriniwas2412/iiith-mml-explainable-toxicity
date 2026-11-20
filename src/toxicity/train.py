@@ -32,15 +32,16 @@ def set_seed(seed: int) -> None:
 
 
 class _TokenizedComments(Dataset):
-    def __init__(self, encodings, labels: np.ndarray):
+    def __init__(self, encodings, labels: np.ndarray, weights: np.ndarray):
         self.encodings = encodings
         self.labels = labels
+        self.weights = weights
 
     def __len__(self) -> int:
         return len(self.labels)
 
     def __getitem__(self, i: int):
-        return {key: values[i] for key, values in self.encodings.items()}, self.labels[i]
+        return {key: values[i] for key, values in self.encodings.items()}, self.labels[i], self.weights[i]
 
 
 def mean_pr_auc(y_true: np.ndarray, y_prob: np.ndarray) -> float:
@@ -71,12 +72,16 @@ def train_model(
     out_dir: str | Path,
     device: str | None = None,
     log_every: int = 100,
+    sample_weight: np.ndarray | None = None,
 ) -> dict:
     """Train, evaluate on `val_df` after each epoch and keep the best epoch.
 
     Writes to `out_dir`: model/ (best weights + tokenizer), val_predictions.csv
     (from the best epoch), history.json and run_config.json. The best epoch is
     the one with the highest mean validation PR-AUC.
+
+    `sample_weight` (one value per training row) scales each comment's loss, as in
+    Vaidya et al. (2020); with all weights 1 the loss equals the unweighted mean.
     """
     model_cfg, train_cfg = cfg["model"], cfg["train"]
     set_seed(cfg["seed"])
@@ -95,20 +100,22 @@ def train_model(
 
     y_train = train_df[LABELS].to_numpy(dtype=np.float32)
     y_val = val_df[LABELS].to_numpy()
-    loss_fn = build_loss(train_cfg["loss"], y_train, train_cfg).to(device)
+    weights = np.ones(len(train_df), dtype=np.float32) if sample_weight is None else sample_weight.astype(np.float32)
+    loss_fn = build_loss(train_cfg["loss"], y_train, train_cfg, reduction="none").to(device)
 
     encodings = tokenizer(
         train_df[TEXT_COL].tolist(), truncation=True, max_length=model_cfg["max_length"]
     )
 
     def collate(items):
-        features, labels = zip(*items)
+        features, labels, row_weights = zip(*items)
         batch = tokenizer.pad(list(features), return_tensors="pt")
         batch["labels"] = torch.from_numpy(np.stack(labels))
+        batch["weights"] = torch.tensor(row_weights, dtype=torch.float32)
         return batch
 
     loader = DataLoader(
-        _TokenizedComments(encodings, y_train),
+        _TokenizedComments(encodings, y_train, weights),
         batch_size=train_cfg["batch_size"],
         shuffle=True,
         collate_fn=collate,
@@ -127,6 +134,7 @@ def train_model(
         "config": cfg,
         "device": str(device),
         "train_rows": len(train_df),
+        "upweighted_rows": int((weights != 1.0).sum()),
         "val_rows": len(val_df),
         "torch": torch.__version__,
     }
@@ -138,6 +146,7 @@ def train_model(
         running = 0.0
         for step, batch in enumerate(loader, 1):
             labels = batch.pop("labels").to(device)
+            row_weights = batch.pop("weights").to(device)
             batch = {key: value.to(device) for key, value in batch.items()}
             autocast = (
                 torch.autocast(device_type="cuda", dtype=torch.float16)
@@ -146,7 +155,8 @@ def train_model(
             )
             with autocast:
                 logits = model(**batch).logits
-            loss = loss_fn(logits.float(), labels)
+            per_row = loss_fn(logits.float(), labels).mean(dim=1)
+            loss = (per_row * row_weights).sum() / row_weights.sum()
 
             optimizer.zero_grad(set_to_none=True)
             scaler.scale(loss).backward()

@@ -36,3 +36,14 @@ def test_build_loss_by_name():
     assert isinstance(build_loss("bce", y, {}), torch.nn.BCEWithLogitsLoss)
     with pytest.raises(ValueError):
         build_loss("hinge", y, {})
+
+
+def test_unreduced_losses_average_to_the_reduced_loss():
+    y = np.array([[1, 0], [0, 0], [0, 1]], dtype=np.float32)
+    logits = torch.tensor([[1.0, -2.0], [0.5, 0.1], [-1.0, 2.0]])
+    targets = torch.from_numpy(y)
+    for name in ("bce", "weighted_bce", "focal"):
+        mean = build_loss(name, y, {"pos_weight_power": 0.5})(logits, targets)
+        each = build_loss(name, y, {"pos_weight_power": 0.5}, reduction="none")(logits, targets)
+        assert each.shape == (3, 2)
+        assert each.mean().item() == pytest.approx(mean.item())

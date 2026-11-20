@@ -73,3 +73,19 @@ def test_training_writes_a_loadable_model_and_predictions(tmp_path, comments, ti
     # Batching by length must not change which row a prediction belongs to.
     shuffled = np.random.default_rng(0).permutation(len(texts))
     assert scorer.predict_proba([texts[i] for i in shuffled]) == pytest.approx(reloaded[shuffled], abs=1e-5)
+
+
+def test_training_accepts_per_row_weights(tmp_path, comments, tiny_model_dir):
+    from toxicity.train import train_model
+
+    cfg = load_config()
+    cfg["model"].update(name=str(tiny_model_dir), max_length=32)
+    cfg["train"].update(loss="weighted_bce", epochs=1, batch_size=32, eval_batch_size=64, lr=1e-3)
+    train, val = multilabel_split(comments, 0.25, seed=0)
+    weights = np.where(train[LABELS].sum(axis=1) == 0, 3.0, 1.0)
+
+    result = train_model(train, val, cfg, tmp_path / "run", device="cpu", sample_weight=weights)
+
+    assert np.isfinite(result["history"][0]["train_loss"])
+    config = json.loads((tmp_path / "run" / "run_config.json").read_text())
+    assert config["upweighted_rows"] == int((weights != 1.0).sum())
