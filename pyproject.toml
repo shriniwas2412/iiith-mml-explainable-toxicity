@@ -14,6 +14,8 @@ dependencies = [
     "pyyaml",
     "joblib",
     "iterative-stratification",
+    "nltk",
+    "vaderSentiment",
 ]
 
 [project.optional-dependencies]
@@ -26,4 +28,4 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-markers = ["slow: trains a tiny transformer on CPU (needs torch and transformers)"]
+markers = ["slow: trains a tiny model on CPU (needs torch and transformers)"]

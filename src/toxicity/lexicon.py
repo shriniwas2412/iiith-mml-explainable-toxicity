@@ -71,3 +71,17 @@ def mention_matrix(texts: Iterable[str], terms: pd.DataFrame) -> pd.DataFrame:
 def mentions_any(texts: Iterable[str], terms: pd.DataFrame) -> np.ndarray:
     """True for texts that mention at least one term."""
     return mention_matrix(texts, terms).any(axis=1).to_numpy()
+
+
+def axis_mentions(texts: Iterable[str], terms: pd.DataFrame) -> pd.DataFrame:
+    """Boolean frame: one row per text, one column per "term_set:axis" (e.g. "india:caste").
+
+    A column is True when the text mentions any term on that axis.
+    """
+    hits = mention_matrix(texts, terms)
+    axis_of = terms.drop_duplicates(["term_set", "identity"]).set_index(["term_set", "identity"])["axis"]
+    out = {}
+    for (term_set, identity) in hits.columns:
+        name = f"{term_set}:{axis_of[(term_set, identity)]}"
+        out[name] = out.get(name, np.zeros(len(hits), dtype=bool)) | hits[(term_set, identity)].to_numpy()
+    return pd.DataFrame(out, index=hits.index)

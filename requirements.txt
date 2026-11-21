@@ -6,5 +6,7 @@ scikit-learn
 pyyaml
 joblib
 iterative-stratification
+nltk
+vaderSentiment
 matplotlib
 pytest

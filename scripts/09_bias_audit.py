@@ -4,6 +4,8 @@
         --thresholds runs/baseline_tfidf_lr/thresholds.json --out reports/bias/baseline
     python scripts/09_bias_audit.py --model hf:runs/distilbert_wbce/model \
         --thresholds runs/distilbert_wbce/thresholds.json --out reports/bias/distilbert_wbce
+    python scripts/09_bias_audit.py --model rnn:runs/vaidya_gru_mt_idw3_30k/model \
+        --thresholds runs/vaidya_gru_mt_idw3_30k/thresholds.json --out reports/bias/vaidya_gru_mt_idw3_30k
     python scripts/09_bias_audit.py --model detoxify:original --out reports/bias/detoxify_original
 
 Without --thresholds a flat 0.5 cutoff is used for the false positive / negative rates.
@@ -32,7 +34,7 @@ from toxicity.scoring import load_scorer
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--model", required=True, help="baseline:<joblib> | hf:<folder> | detoxify:<variant>")
+    parser.add_argument("--model", required=True, help="baseline:<joblib> | hf:<folder> | rnn:<folder> | detoxify:<variant>")
     parser.add_argument("--templates", default="data/templates/templates_en.csv")
     parser.add_argument("--thresholds", default=None, help="thresholds.json from 06_tune_thresholds.py")
     parser.add_argument("--out", required=True)

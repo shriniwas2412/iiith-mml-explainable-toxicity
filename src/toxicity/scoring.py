@@ -5,6 +5,7 @@ A scorer has `predict_proba(texts) -> array of shape (n, 6)` with columns in
 
     baseline:<path to model.joblib>
     hf:<directory saved by the training script>
+    rnn:<model directory saved by scripts/15_vaidya_rnn.py>
     detoxify:<original | unbiased | multilingual>
 """
 
@@ -87,6 +88,22 @@ class TransformerScorer:
         return predict_proba_transformer(self.model, self.tokenizer, texts, self.batch_size, self.max_length)
 
 
+class RNNScorer:
+    """A model directory written by `toxicity.rnn.train_rnn` (GloVe/fastText Bi-GRU with attention)."""
+
+    def __init__(self, model_dir: str, batch_size: int = 256, device: str | None = None):
+        from .rnn import load_rnn
+
+        self.model, self.vocab, settings = load_rnn(model_dir, device)
+        self.batch_size = batch_size
+        self.max_length = settings["max_length"]
+
+    def predict_proba(self, texts: Sequence[str]) -> np.ndarray:
+        from .rnn import predict_proba_rnn
+
+        return predict_proba_rnn(self.model, self.vocab, texts, self.batch_size, self.max_length)
+
+
 # Detoxify reports some labels under different names than the Kaggle columns.
 _DETOXIFY_KEYS = {
     "toxic": ("toxicity", "toxic"),
@@ -131,6 +148,8 @@ def load_scorer(spec: str, device: str | None = None):
         return BaselineScorer(value)
     if kind == "hf":
         return TransformerScorer(value, device=device)
+    if kind == "rnn":
+        return RNNScorer(value, device=device)
     if kind == "detoxify":
         return DetoxifyScorer(value, device=device)
-    raise ValueError(f"Unknown model kind '{kind}'. Use baseline, hf or detoxify.")
+    raise ValueError(f"Unknown model kind '{kind}'. Use baseline, hf, rnn or detoxify.")

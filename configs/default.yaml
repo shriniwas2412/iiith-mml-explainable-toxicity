@@ -31,3 +31,20 @@ train:
   weight_decay: 0.01
   warmup_ratio: 0.06
   max_grad_norm: 1.0
+
+# Bi-GRU / Bi-LSTM with attention and pre-trained word vectors (scripts/15_vaidya_rnn.py).
+# Loss settings come from the train section above; epochs, batch size and lr are set here.
+rnn:
+  embedding: glove       # glove (6B, 300d) | fasttext (wiki-news, 300d) | random (tests only)
+  max_vocab: 50000
+  max_length: 200
+  embedding_dim: 300
+  hidden_size: 128
+  cell: gru              # gru | lstm
+  dropout: 0.3
+  freeze_embeddings: true
+  multitask: false       # add an identity-axis prediction head (weak labels from the identity lexicon)
+  aux_weight: 1.0        # weight of the identity loss relative to the toxicity loss
+  epochs: 6
+  batch_size: 128
+  lr: 1.0e-3
