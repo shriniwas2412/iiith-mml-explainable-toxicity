@@ -1,0 +1,41 @@
+error_type,id,label,score,threshold,comment_text
+false_positive,d9e6b2d19bb2915c,insult,0.99975022332731,0.3933152081856543,""" :I'm an idiot. """
+false_positive,1ec9340f9c3b8506,insult,0.9996778740038657,0.3933152081856543,you madyou madyou madyou madyou madyou madyou madyou madyou madyou madyou madz9
+false_positive,43788acbb22ce970,insult,0.9996778740038657,0.3933152081856543,Thabk you
+false_positive,ed421004c6e7f026,insult,0.999346611803136,0.3933152081856543,""" ::::FUCK YOU! """
+false_positive,e184a647fec65df3,insult,0.9975978573857552,0.3933152081856543,"::Noted! I'm an idiot, lol."
+false_positive,b0136040015b30e6,insult,0.9973692918010948,0.3933152081856543,you are a jew with smal dick
+false_positive,d563b2d34240ae50,insult,0.9967865826493512,0.3933152081856543,cancer == i go fuck you mom and i go make you fucking horny kill ==
+false_positive,1deaacb5181ae452,insult,0.9962687424251576,0.3933152081856543,::Mooch ass grassy ass. ..
+false_positive,57c9a1d1db503066,insult,0.9962687424251576,0.3933152081856543,assassassassass ass ass aaassssss
+false_positive,87905fb0c94e2044,insult,0.9956517879185094,0.3933152081856543,"""FUCK THE FUCKING FUCKERS """
+false_positive,639faab683e5907b,insult,0.9936575496584784,0.3933152081856543,", you are Acrotertion"
+false_positive,d04d6ca17d812027,insult,0.9936575496584784,0.3933152081856543,You are a tadger
+false_positive,fb39ffa10f153a6b,insult,0.9936575496584784,0.3933152081856543,== titace == You are ricin humiliatscccyt
+false_positive,2bf81624b06ce086,insult,0.9926779076596128,0.3933152081856543,:You're fuckin' right. -)
+false_positive,6ef09355dc7d95dd,insult,0.9923226497601516,0.3933152081856543,YOU SUCK NUTZZZZZZZ YAYYYYYYY
+false_positive,5ca92928fbdf3615,insult,0.9922151588428384,0.3933152081856543,== no subject == FUCK YOU
+false_positive,d8b884ed799247d8,insult,0.991385095516477,0.3933152081856543,== hello == Suck my di*ck faggot
+false_positive,2e197c63849eb5ce,insult,0.9913372922822304,0.3933152081856543,You foolish Fool Go burn
+false_positive,df996cea70925f2a,insult,0.9883581422342336,0.3933152081856543,"== Edit request on 14 January 2013 == Cheef keef is a bitch ass dude. He is not about that life and hes a hoe ass dude. He didnt kill little Jojo cause he a scared ass hoe, fuck you. you claim you a G and a blood. You stil a fucking hoe. When My Niggas catch you its sad cause you a bitch. Your mom g"
+false_positive,a8edd7acc2982ef6,insult,0.985366504578036,0.3933152081856543,I SUCK YOUR MOM'S DICK!!!!!!HAHAHHAHHAHAAHHA
+false_negative,c2db019832f6dfe1,insult,0.0150929260373863,0.3933152081856543,""" * What a load of crap. """"That sort of defective html causes annoyance for screen readers who are led to expect a definition, """" : This is not """"defective"""" (or even not valid HTML) see http://www.w3.org/TR/html4/struct/lists.html#h-10.3 : For the HTML standard, any combination of and within a is v"
+false_negative,1a3b2d159f2708e8,insult,0.0188542538338652,0.3933152081856543,"==The article was locked!== I've got an account, but it is annoying how some silly dimwit caused this to get locked!"
+false_negative,b1fa493576c02af3,insult,0.0191834127166351,0.3933152081856543,thanks! isnt it amazing how misdirected idiotic intellect seems to be?
+false_negative,0ce0d78e4ba2e4b1,insult,0.0197739220654036,0.3933152081856543,== Vandalism == HEELLLPPPP!!!!! SOMEONE'S REPLACED THE ENTIRE MAIN PAGE! SOMEBODY PLEASE (pardon my language) DAMN HIM FOR ETERNITY!
+false_negative,a3c845eaf9073155,insult,0.0214476279371788,0.3933152081856543,"And please, log in, don't be a sockpuppet."
+false_negative,20a4716eee1788e6,insult,0.0225991650604853,0.3933152081856543,This article is really a f*** bullshit. :
+false_negative,8e5602b8ae8ca244,insult,0.02443706419945,0.3933152081856543,"== Practice What You Preach == Stay away from my talk page, dipshit! ( )"
+false_negative,647a6b6ae7c304e7,insult,0.0248267856837847,0.3933152081856543,== Moose Jaw == Moose Jaw is one of the most stupidest Cities in Saskatchewan!
+false_negative,7c2fb8b2a792294c,insult,0.0277999146977781,0.3933152081856543,== Reference == Some stupids are constantly removing the references !!! Don't know what vested interests they have regarding chekava caste !!!
+false_negative,76a6f548b0b2d1ae,insult,0.0282026089436556,0.3933152081856543,":This is absolute rubbish, I have been discussing these edits at length on the discussion page, please read it before making these ridiculous accusations!"
+false_negative,396abb64ae9b249f,insult,0.0283885121201632,0.3933152081856543,""" ::The current article shows once more how idiotic it is to equate """"La Liga"""" with """"Primera División"""". Racing was always part of La Liga, but only 30odd years in the First Division. """
+false_negative,7d097842b5842e4b,insult,0.0288089542308056,0.3933152081856543,"::there is also another problem with it,if dink the little dinosaur is a children series then why does the author use the word motherfucker in the title?"
+false_negative,ed0b6cec33857a36,insult,0.0303714591494893,0.3933152081856543,es un gordo feo pero rockea
+false_negative,99d58c12cc7d4ed1,insult,0.0308778986724545,0.3933152081856543,I have two semi-automatic pistols and i am in a gang called the DAMN NIGS OF THA WESt
+false_negative,39e42f2f7b76a86a,insult,0.0315307400810922,0.3933152081856543,This article is bullshit!
+false_negative,7df42368798fe5ba,insult,0.0329742077512455,0.3933152081856543,hi ashley is a gorilla
+false_negative,9cb103b018c1857a,insult,0.0337380876516754,0.3933152081856543,"Ok, i am here to learn about BPM... the section that really explains it is so short... but the section that talks about stupid Speedcore Hardcore whatever crapcore techno shit music that only losers listen to is dedicated most part of the article? someone should definetely change this. what about BM"
+false_negative,6c0d026a793af10d,insult,0.0344788781084955,0.3933152081856543,"""It isn't a personal attack though is it, as it isn't directed at anybody.... It's a general comment about the number of incompetent individual wikipedia attracts. A personal attack would be """"Kevin McE is a f**king wanker. What a twat that fella is"""". I said nothing of the sort.♦ """
+false_negative,08b73e7ffbdd48b6,insult,0.0363830105822085,0.3933152081856543,"At this point I think that both sides have so entrenched themselves in their positions that getting any edits in either way is going to be impossible until the Drive-by WND idiots leave or start making constructive, sourced edits."
+false_negative,db07e50012c8154d,insult,0.036729360983698,0.3933152081856543,""" :Please don't use racist expressions like """"Jap"""" on my talk page. In fact, in general, don't come to my talk page to post bullshit. '''' """

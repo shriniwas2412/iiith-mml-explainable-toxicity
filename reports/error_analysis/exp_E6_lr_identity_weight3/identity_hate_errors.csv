@@ -1,0 +1,41 @@
+error_type,id,label,score,threshold,comment_text
+false_positive,10dbb6560b1ebc96,identity_hate,0.9999596120460066,0.641832342935165,== Gay naturism ==
+false_positive,33c020e41490b923,identity_hate,0.9999596120460066,0.641832342935165,== gay == v gay
+false_positive,35be7e6df9cc29fa,identity_hate,0.9999596120460066,0.641832342935165,== u gay == u gay
+false_positive,99c004fa0ce49767,identity_hate,0.9999596120460066,0.641832342935165,GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY GAY 
+false_positive,b475da46cee6f214,identity_hate,0.9999596120460066,0.641832342935165,xgay gay gay gay gya gya gya gya gfyagatyyzsgdfsgfuxzkmgtiodfg'rfhg r hbfdj GAY
+false_positive,d53d1a229097bc8b,identity_hate,0.9999596120460066,0.641832342935165,== kaleb fulbright == defination gay
+false_positive,ea8041162ca803d4,identity_hate,0.9997957517717636,0.641832342935165,== gay == are you gay?
+false_positive,d6a490844dd82ba7,identity_hate,0.999736992908958,0.641832342935165,you are gay
+false_positive,854d5de9bcaf1a74,identity_hate,0.9994122740984692,0.641832342935165,== Weston Kartes == He is gay
+false_positive,aa353f1e06b6d0e4,identity_hate,0.9993346987200284,0.641832342935165,Usman Patel is gay
+false_positive,143abcff4dc47e7b,identity_hate,0.9992366046130852,0.641832342935165,I think you are gay
+false_positive,b26eb60d60ad302a,identity_hate,0.9990212939634804,0.641832342935165,shit mother fucker bitches what a whore nigger
+false_positive,8f86bae7a924cf91,identity_hate,0.998705387881499,0.641832342935165,== FUCK YOU == FUCK YOU. I HOPE YOUR FAMILY DIES AND YOU DIE AND YOUR BROTHER AND SISTERS DIE AND I HOPE YOU DIE. I HOPE YOU GET AIDS AND DIE AND GET YOUR ASS FUCKED. I HOPE YOU DIE AGAIN AND SUCKS SATAN'S COCK YOU DIRTY BITCH NIGGA NIGGER. UFCK YOU COCKSUCKER. FUCK YOU FUCKING BITCH FUCK YOU FUCK Y
+false_positive,d320f8749c6d9820,identity_hate,0.9986025054103036,0.641832342935165,fuck you dick ass shit go fuck your fuckin sle fim sicka ass
+false_positive,b5c05828f3bf56f1,identity_hate,0.9981166238343772,0.641832342935165,Rocco is a gay guy
+false_positive,d23bc2abb90bbd4d,identity_hate,0.9979938544227056,0.641832342935165,== gay people == they are gay
+false_positive,6d1473a083f6a9c3,identity_hate,0.9974625986645672,0.641832342935165,== conners boy lovin == he is gay
+false_positive,3db1b13f48ce26e5,identity_hate,0.9970297674884416,0.641832342935165,"uh, u are gay"
+false_positive,87cf729202a19c5d,identity_hate,0.9968486453843386,0.641832342935165,i dont think he is gay
+false_positive,935d532d35b58636,identity_hate,0.99654468417942,0.641832342935165,we are gay
+false_negative,df4a51c5eaa5e59b,identity_hate,0.0043451288081225,0.641832342935165,""" == OH PLEASE == I know this has nothing to do with editing the article, but I just can't believe that people are this PC Fanatical that you can't even say a word that means something completely different than the N word, and is not even derived from the same word. Niggardly should not be a controv"
+false_negative,9c9591203091ffad,identity_hate,0.0046854797821542,0.641832342935165,""" (UTC) ::::::I see this is an OLD comment thread, but in case anyone is still contemplating this, I wanted to talk about it. I don't think it's a racist term at all. What you have to realize is that the words aren't really linked to each other. White trash means someone is white, and they are trash"
+false_negative,5afa5aeb167f28e3,identity_hate,0.0071081217653009,0.641832342935165,== AMERICA MUST BE CRUSHED == I am a 15 year old male Anglo-German I would like to share what i think about America. AMERICA HAS TO BE TAKEN DOWN! THE ONLY WAY THIS WILL WORK IS IF EUROPE JOINS INTO THE BIGGEST SUPER POWER EVER AND TAKES OVER THE WORLD!!! AMERICA HAS BECOME TO POWERFUL TO GREEDY AND
+false_negative,e970a0d9d4ca23af,identity_hate,0.0086235323760843,0.641832342935165,he was the gayest person alive.
+false_negative,90a178d4133c2b25,identity_hate,0.0108103076671371,0.641832342935165,":That's not what I care about. I want an image of the true, Black Jesus on this page. One put in by the White Racist Censorship Committe of the Church is not what I want to see. I don't pray to some cracker from a trailer park in the Middle East."
+false_negative,3f10b8528f73e06d,identity_hate,0.0108312787391776,0.641832342935165,"== Niggar, Monkey God, Teabagger == there is a possibility some of the material on this article is offensive and marginally relevant if at all. would removing the material change the meaning of the article, if so how?"
+false_negative,8995418b22dedaab,identity_hate,0.0113299345392811,0.641832342935165,"==Rounding up and killing Jews== I going to remove this until it can be better saourced. The ADL article has him saying that the wants to kill some k*ke and some other garbage, but this seems like it should be better sourced. I am no suporter of this person or his hate speech for what its worth. Tha"
+false_negative,1bc2092dee2ba30f,identity_hate,0.0119497674368881,0.641832342935165,== Why all muslims should be burned alive == Because they deserve it. We hope to finish off some 800 million muslims by the year 2010. That's a lot of killing to do. But we will sure enjoy it. In the name of the United States of America in the name of freedom this must be accomplished. Post your com
+false_negative,a096038dc011b03a,identity_hate,0.0138264351642451,0.641832342935165,":: it is hardly questionable, because it proves a point that many refined people cannot understand. If a strange white man walk up to a white man on the subway and starts asking personal questions, well that is pretty damn weird if it happens to you. I'd think the guy was insane or a potential crimi"
+false_negative,522d33a0f062164a,identity_hate,0.0139534288353572,0.641832342935165,alexandeer was the gayest person in the world.
+false_negative,99d58c12cc7d4ed1,identity_hate,0.0142527185122152,0.641832342935165,I have two semi-automatic pistols and i am in a gang called the DAMN NIGS OF THA WESt
+false_negative,ebdd440ea8ba8b4f,identity_hate,0.0149658939993742,0.641832342935165,Wow! Good job! NOT!!! This article is poorly written and has a FAGGOT point of view (or POV as us in the wikipedia community call it). Please refrain from editing any other articles as your contributions are not welcome here.
+false_negative,17dca117f485d04b,identity_hate,0.017075983472027,0.641832342935165,:Niggaz b niggaz b niggaz; why be difficult about this?
+false_negative,115d644bbbab3919,identity_hate,0.0171731395335855,0.641832342935165,::* aw shutup. whites have been biased against us for centuries.
+false_negative,d043a817973365a5,identity_hate,0.0177264478413612,0.641832342935165,"I really doubt there are large numbers of illegal from bangladesh, pak, burma. Why leave a shithole for another shithole? its like mexicans immigrating to honduras or colombia."
+false_negative,bdaa6a1bd714ff9f,identity_hate,0.0187543082181649,0.641832342935165,"Stop F-in with The Grover, he has connections. MYOB, nigg"
+false_negative,700c9de289095dc7,identity_hate,0.0198630646596272,0.641832342935165,""" *No, it doesn't. It at most make him someone who at one particular moment said something anti-semitic, and it makes him someone accused of being an anti-semite. So, if I say something anti-semitic here """"Jews Suck!"""" does that mean I'm an anti-Semite? """
+false_negative,1592acc0f475ff9d,identity_hate,0.020024916143315,0.641832342935165,""" ==Bias== """"If left alone it will read """"Germans are murderers who only want to murder Poles."""" I am sorry if you feel that way but what are you proposing ? The history of Germany has many cases of atrocities against Poles. Nobody is claiming what you wrote, but that doesn't mean we shouldn't write"
+false_negative,e456b7c2fcc943cd,identity_hate,0.0224763491371686,0.641832342935165,he was the first white president of the usa who let bulgarians infect the world with there finger licking. and tiny willys.
+false_negative,3131a9dcd4ac1a63,identity_hate,0.0237927755069181,0.641832342935165,WE WE MUSTA DANAGE THIS ISLAMCI COCK SEUKER

@@ -1,0 +1,12 @@
+{
+  "run_name": "distilbert_wbce_30k_ig",
+  "n_examples": 930,
+  "n_local_examples": 15,
+  "n_template_examples": 915,
+  "mean_completeness_error": 0.00376914407683428,
+  "max_completeness_error": 0.023289144039154053,
+  "steps": 50,
+  "baseline": "pad",
+  "device": "cuda:0",
+  "seconds": 46.7
+}

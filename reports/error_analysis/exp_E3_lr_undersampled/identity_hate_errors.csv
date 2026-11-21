@@ -1,0 +1,41 @@
+error_type,id,label,score,threshold,comment_text
+false_positive,10dbb6560b1ebc96,identity_hate,0.999407444006237,0.1699990874627582,== Gay naturism ==
+false_positive,d53d1a229097bc8b,identity_hate,0.999407444006237,0.1699990874627582,== kaleb fulbright == defination gay
+false_positive,212ade4ad278dad4,identity_hate,0.996392339505424,0.1699990874627582,== Jew? == Jew?!
+false_positive,ea8041162ca803d4,identity_hate,0.995816153803484,0.1699990874627582,== gay == are you gay?
+false_positive,d6a490844dd82ba7,identity_hate,0.993613534062115,0.1699990874627582,you are gay
+false_positive,143abcff4dc47e7b,identity_hate,0.9811802187716409,0.1699990874627582,I think you are gay
+false_positive,33c020e41490b923,identity_hate,0.9809519104913824,0.1699990874627582,== gay == v gay
+false_positive,35be7e6df9cc29fa,identity_hate,0.9809519104913824,0.1699990874627582,== u gay == u gay
+false_positive,935d532d35b58636,identity_hate,0.9798563898652554,0.1699990874627582,we are gay
+false_positive,b5db9a138d28e2fd,identity_hate,0.9751418489375074,0.1699990874627582,cuz they some bitches. go fuck a jew bitchesssssss
+false_positive,b26eb60d60ad302a,identity_hate,0.9743659965720012,0.1699990874627582,shit mother fucker bitches what a whore nigger
+false_positive,d23bc2abb90bbd4d,identity_hate,0.9665968596200596,0.1699990874627582,== gay people == they are gay
+false_positive,9ae6214b90010cb8,identity_hate,0.9608246578734037,0.1699990874627582,== Sexual orienatation == Homosexual
+false_positive,7a82b4ad078da191,identity_hate,0.9595564397089577,0.1699990874627582,I'm a closet homosexual
+false_positive,b475da46cee6f214,identity_hate,0.9593399569548988,0.1699990874627582,xgay gay gay gay gya gya gya gya gfyagatyyzsgdfsgfuxzkmgtiodfg'rfhg r hbfdj GAY
+false_positive,3d82642e0b799eb1,identity_hate,0.9526585129803092,0.1699990874627582,12121212121212 jews jews jews jews jews jews jews jews jews jews jews jews jews jews jews jews jews
+false_positive,dad9931fe12cb1ab,identity_hate,0.9477539772647392,0.1699990874627582,== bog == bog nazi
+false_positive,3db1b13f48ce26e5,identity_hate,0.9473027612618712,0.1699990874627582,"uh, u are gay"
+false_positive,aa353f1e06b6d0e4,identity_hate,0.9464464926216452,0.1699990874627582,Usman Patel is gay
+false_positive,854d5de9bcaf1a74,identity_hate,0.9158818471250484,0.1699990874627582,== Weston Kartes == He is gay
+false_negative,3f10b8528f73e06d,identity_hate,0.0061145952315203,0.1699990874627582,"== Niggar, Monkey God, Teabagger == there is a possibility some of the material on this article is offensive and marginally relevant if at all. would removing the material change the meaning of the article, if so how?"
+false_negative,de1d95a1f7212e0a,identity_hate,0.0086282039956098,0.1699990874627582,ok but j delanoy is a fag
+false_negative,906ffc183474a256,identity_hate,0.008791621083702,0.1699990874627582,""" == F***ing RETARD! == STOP SPAMMING MY USERPAGE!!! I'M ABOUT TO FILE A COMPLAINT NOW! """
+false_negative,ebdd440ea8ba8b4f,identity_hate,0.0092550640276968,0.1699990874627582,Wow! Good job! NOT!!! This article is poorly written and has a FAGGOT point of view (or POV as us in the wikipedia community call it). Please refrain from editing any other articles as your contributions are not welcome here.
+false_negative,261d211b96675c1d,identity_hate,0.0117932491848675,0.1699990874627582,""" :And you are lynching Negroes is not a valid argument. Through quite fitting here ) | """
+false_negative,dfec31412dc4bc33,identity_hate,0.0120146617981692,0.1699990874627582,this is fun! fuck you wikipedia!ha ha niggerz!!!!!!!!!lolololol
+false_negative,5a47ea380193190e,identity_hate,0.0120843327444105,0.1699990874627582,== nerds == Piss off niggerfuck i have more muscle on my dick than you do on your arms
+false_negative,77e2dbef136251fa,identity_hate,0.012165043711484,0.1699990874627582,== afds == PUPPET MASTER TIPTOETY IS GAYYYY
+false_negative,54b79c5345169012,identity_hate,0.0122696337573871,0.1699990874627582,== STFU == SHUT THE NIGG AH UP
+false_negative,115d644bbbab3919,identity_hate,0.0129578739230309,0.1699990874627582,::* aw shutup. whites have been biased against us for centuries.
+false_negative,d368b74bc7a9a035,identity_hate,0.0130958820753477,0.1699990874627582,""" :Fair enough. I changed the wording to """"a homophobic slur"""" though, because, as far as I know, he only said """"faggot"""" (well, it was censored as """"ft""""), and saying to someone """"suck my dick"""" isn't really a homophobic slur in this context, despite what I think the source reported. """
+false_negative,99d58c12cc7d4ed1,identity_hate,0.0134260418311505,0.1699990874627582,I have two semi-automatic pistols and i am in a gang called the DAMN NIGS OF THA WESt
+false_negative,dfb91a250d0e8841,identity_hate,0.0143798605948133,0.1699990874627582,"== fuck niggars like greg == YOU FAILED AGAIN TO BLOCK ME WIKIPEDIANS!! HA HA!! For some nice big juicy sweet cock, my number is 248-678-9807 Goodbye lovers."
+false_negative,bdaa6a1bd714ff9f,identity_hate,0.0153776113418121,0.1699990874627582,"Stop F-in with The Grover, he has connections. MYOB, nigg"
+false_negative,77d422e698676b32,identity_hate,0.0155837391229599,0.1699990874627582,u rr soooo fucken gayyyyy == Headline text ==
+false_negative,0ee3304bca31ef68,identity_hate,0.0201293722781846,0.1699990874627582,== What possesses these weirdos? == Why on earth would people who consider themselves Christian even THINK that redirecting pages to Jesus will somehow lead people to seriously consider Christianity??? Idiots! Idiots! Idiots! I feel better now.
+false_negative,d043a817973365a5,identity_hate,0.0205721631612116,0.1699990874627582,"I really doubt there are large numbers of illegal from bangladesh, pak, burma. Why leave a shithole for another shithole? its like mexicans immigrating to honduras or colombia."
+false_negative,77041dcbc7c7572a,identity_hate,0.0209410390976674,0.1699990874627582,"What the flying fuck are you talking about? Damn, are all of you otaku's faggots, dumbasses, assholes, losers, goths, punks, freaks, or a combination of the 8? The article ain't baised, its talking about the company dumbass."
+false_negative,a2266cd2dbd52ddd,identity_hate,0.0218427154802374,0.1699990874627582,""" :::::""""Stupid votes"""", is it? So why then is Sarah777 advocating the copying of British editing stupidity? """
+false_negative,e92cf7732e4a0dea,identity_hate,0.0223755518787782,0.1699990874627582,fuckk u jayz is gayy

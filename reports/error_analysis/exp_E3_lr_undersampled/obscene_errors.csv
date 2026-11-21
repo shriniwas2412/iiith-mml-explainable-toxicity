@@ -1,0 +1,41 @@
+error_type,id,label,score,threshold,comment_text
+false_positive,7126b0010a7b13e4,obscene,0.9999346341648552,0.39006717082174697,fuck u ill do whatever I fucking want boy
+false_positive,aca246a2f454e7c3,obscene,0.9998498620747076,0.39006717082174697,i dont giv a fuck nick
+false_positive,a39ba680d310b8a3,obscene,0.999812337306962,0.39006717082174697,== Thanks! == FUCK YOU TOO
+false_positive,df996cea70925f2a,obscene,0.9998097252716176,0.39006717082174697,"== Edit request on 14 January 2013 == Cheef keef is a bitch ass dude. He is not about that life and hes a hoe ass dude. He didnt kill little Jojo cause he a scared ass hoe, fuck you. you claim you a G and a blood. You stil a fucking hoe. When My Niggas catch you its sad cause you a bitch. Your mom g"
+false_positive,8009d60f7fde43a9,obscene,0.9997414836475168,0.39006717082174697,WHO THE FUCK DISCUSSES PILLOWS?
+false_positive,f37e1a916460cec1,obscene,0.9992818248021884,0.39006717082174697,:Fuck off you ignoramus!
+false_positive,b1ddc4ddf62d54c6,obscene,0.9991832425060776,0.39006717082174697,==== 去參考的內容再修正Peter Nguyen的條目吧！ 你這個豬玀！你這個賤雜種！你這個中華人民共和國獨裁政權的走狗！ Fuck Your Mother！
+false_positive,955cb70e0e67748f,obscene,0.9989640563849944,0.39006717082174697,==I use truecrypt so fuck you!== Yes!
+false_positive,a9ddbf373ffa52e1,obscene,0.9985757168908076,0.39006717082174697,"== Test to be reverted shortly == WHAT THE FUCK IS WRONG WITH YOU, HEIM? YOU SUCK!"
+false_positive,c1f21bfc6f6cef58,obscene,0.998566208083936,0.39006717082174697,Shut the fuck up both of you!
+false_positive,f4d51c4c28b24503,obscene,0.998202038479032,0.39006717082174697,""" ==Suggestions== ([A-Za-z])\1{4,};;-1;;v ([A-Z]){5,};;-1;;v nig+(er|a)[sz]?;;-1;;v (h[aoe])\1{3,};;-1;;v l(o|aw|u)l([zs]|ed)?;;-.5;;v (dic?|coc)k[\-\s]?suc?ker[sz]?;;-3;;v suck;;-.5;;v \s(dic?|coc)k\s;;-1;;v \sass(es)?\s;;-.5;;v rape;;-.5;;v assrape;;-10;;v (\[\^\*\]\]|{{[^}]*}});;+1;;v [A-Z].*[\.\"
+false_positive,0dd9298968b142cc,obscene,0.9978688501686334,0.39006717082174697,"Shut the fuck up, this is wikipedia."
+false_positive,1b357ec863d6d6b5,obscene,0.996586758879388,0.39006717082174697,Headline textNOT BULLSHIT
+false_positive,591b9e5c6f977654,obscene,0.9961078536840622,0.39006717082174697,"== 24/7 ft. lil D == Talkin:lil D i felt pussy 24/7 its like a paradise so give me whatcha got baby girl verse one:Keishum Martez oom, hey yo, i been feelin it 24/7 baby it feel like i been on my dick for a long time so i need what cha got girl if we were a movie i would have dat pussy swollen and f"
+false_positive,3671a686ef987ca8,obscene,0.9960433123124738,0.39006717082174697,{{unblock|Why? cus fuck you thats why!
+false_positive,1c6d655106b6acd6,obscene,0.9958584690926402,0.39006717082174697,==I fucking love Christian Bale== I fucking love Christian Bale. Post here if you do too!
+false_positive,64fcd4417f2bd50f,obscene,0.9955858743389956,0.39006717082174697,it is suck coutry
+false_positive,d9c16579f06a6011,obscene,0.9953777210977984,0.39006717082174697,""" ::Holy fucking shit, what is NOT an expert in?!"""
+false_positive,674542ce95f07372,obscene,0.9953354553734832,0.39006717082174697,I AM A FUCKING LEGEND
+false_positive,67988a01f24a9ec3,obscene,0.99523358162245,0.39006717082174697,s> Have a nice fucking life.
+false_negative,5678e77927146df6,obscene,0.0101508957797841,0.39006717082174697,paPenisaksi knowen as DICKnarchy
+false_negative,a3d5b5b14bf41f60,obscene,0.0121183288859453,0.39006717082174697,":Gaijin42, is this evidence as ridiculous as it looks?"
+false_negative,b72fe0041040253a,obscene,0.0128106467167593,0.39006717082174697,== hi men == fack u mather
+false_negative,7c2fb8b2a792294c,obscene,0.0182221088608006,0.39006717082174697,== Reference == Some stupids are constantly removing the references !!! Don't know what vested interests they have regarding chekava caste !!!
+false_negative,3f10b8528f73e06d,obscene,0.0182805636584508,0.39006717082174697,"== Niggar, Monkey God, Teabagger == there is a possibility some of the material on this article is offensive and marginally relevant if at all. would removing the material change the meaning of the article, if so how?"
+false_negative,79ffca72f67223ae,obscene,0.0204344913519971,0.39006717082174697,::I suggest you just try and stay away from conversations that don't concern you if you have nothing intelligent to add but moronic personal attacks aimed at me.
+false_negative,c00bed6f75bf6d2b,obscene,0.0225369368660122,0.39006717082174697,FUCKI YALLLLLItalic textSmall TextSuperscript textStrike-through text
+false_negative,d4495f7fb6edd5a4,obscene,0.023509760068491,0.39006717082174697,":It's generally pretty shitty, so I'd be inclined to rely on the reliability of the journalist, Sharon Churcher, as to whether this particular article is reliable or not."
+false_negative,3c344f536a670fd2,obscene,0.0246090997485395,0.39006717082174697,Why have this moronic
+false_negative,1a3b2d159f2708e8,obscene,0.0256555498371479,0.39006717082174697,"==The article was locked!== I've got an account, but it is annoying how some silly dimwit caused this to get locked!"
+false_negative,05cb33eb09d8b2ea,obscene,0.0291976038524981,0.39006717082174697,make those kickass userboxes
+false_negative,e60634b07fc81eee,obscene,0.0339764480391834,0.39006717082174697,== Prostitutes == We have to state that comfort women were prostitutes. Recruited willingly and not sexslaves. Because they werent. They wanted to serve Japan. GLORIOUS JAPAN FOREVER!!!!
+false_negative,82e665f6b99c730c,obscene,0.0363835602381966,0.39006717082174697,The people at cape fear high school are idiotic dummies!
+false_negative,64e0769c78085372,obscene,0.036451530155059,0.39006717082174697,I would like the title to be changed to Datsun 240Z as this is the original name. Calling them Nissan 240Z are for idiotic people who are ashamed to be associated with the Datsun name
+false_negative,39e521fd43804cd2,obscene,0.036660304088268,0.39006717082174697,"== Future == I think the future section, in its exposition of when the oceans will evaporate, is giving undue weight to a single worst-case-scenario back-of-the-envelope calculation by a single professor at a shitty state college."
+false_negative,87a42094b50927b1,obscene,0.037259102203944,0.39006717082174697,and F*** WIKIPEDIA HAHAHAHAHAHAHAAHAHAHAA!!! B******!!!!!
+false_negative,22905770a13fcba5,obscene,0.0380728272666725,0.39006717082174697,"YEC is a stupid, unthinking blasphemy, an idolatry of text, and it's a curse on American Christianity. Jesus spoke in parablesdid the story of the Good Samaritan have to be based on an actual, historical man from Samaria for the story to present a basic truth? If the parables of Jesus could be ficti"
+false_negative,4b3bd7589fa643d7,obscene,0.0384828712681733,0.39006717082174697,. Hitler is gay. and the antichrist
+false_negative,aaca5e616e537603,obscene,0.038667129811074,0.39006717082174697,"Hello and welcome, liten I've had the same [problem with these girls they can be mean, but you can become a better person by klearning from your foolish past"
+false_negative,037206d1d78c822b,obscene,0.0387306684493682,0.39006717082174697,""" someone, please edit this line: """"The Lebanon Operation, U.S. Army Center for Military History, Contingency Operations fckin stupid hoee"""" It's at the end of the article TL"""
