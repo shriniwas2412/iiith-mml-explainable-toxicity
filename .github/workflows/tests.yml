@@ -15,4 +15,5 @@ jobs:
           python-version: "3.10"
           cache: pip
       - run: pip install -e . -r requirements.txt
+      - run: python -c "import nltk; nltk.download('averaged_perceptron_tagger_eng', quiet=True)"
       - run: pytest -q
